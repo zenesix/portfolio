@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.four.boardMapper">
+	<!-- 전체목록 order by 오름차순 -->
+	<select id="list" resultType="BoardDTO">
+		select * from board
+		order by bno
+		desc
+	</select>
+
+	<!-- 선택조회(글 읽기) -->
+	<select id="detail" parameterType="java.lang.Integer"
+		resultType="BoardDTO">
+		select *
+		from board
+		where bno = #{bno}
+	</select>
+
+	<!-- 조회수 1증가하는 SQL "updateReadCnt" -->
+	<update id="updateReadCnt" parameterType="java.lang.Integer">
+		update board
+		set
+		readcnt
+		= readcnt + 1
+		where bno = #{bno}
+	</update>
+
+	<!-- 글 추가하는 SQL "insert" or "register" -->
+	<insert id="register" parameterType="BoardDTO">
+		INSERT INTO webstore.board
+		(bno, title, content, id, reddate, readcnt, etc)
+		VALUES(#{bno},
+		#{title}, #{content}, #{id}, NOW(), 0, #{etc});
+	</insert>
+
+	<!-- 글 수정하는 SQL "update" -->
+	<update id="update" parameterType="BoardDTO">
+		UPDATE webstore.board
+		SET
+		title= #{title}, content= #{content}, reddate= curdate()
+		WHERE bno=
+		#{bno};
+	</update>
+
+	<!-- 글 삭제하는 SQL "delete" del 컬럼을 작성하여 1로 변경 -->
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete from board
+		where bno =
+		#{bno}
+	</delete>
+
+	<!-- 해당글에 대한 댓글 목록 보기 -->
+	<select id="detail1" parameterType="java.lang.Integer"
+		resultType="BoardReply">
+		select * from board_reply
+		where bno = #{bno}
+	</select>
+
+
+	<!-- 댓글쓰기 -->
+	<select id="reply" parameterType="BoardReply">
+		insert into board_reply
+		(rewriter, rememo, redate, bno)
+		values(#{rewriter}, #{rememo}, now(),
+		#{bno})
+	</select>
+	
+	<!-- 댓글 선택조회 -->
+	<select id="detail12" parameterType="java.lang.Integer"
+		resultType="BoardReply">
+		select *
+		from board_reply
+		where reno = #{reno}
+	</select>
+	
+	<!-- 댓글 수정 -->
+	<update id="update1" parameterType="BoardReply">
+	UPDATE webstore.board_reply
+    SET  rememo= #{rememo} , redate= now()
+     WHERE reno= #{reno};
+	</update>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="replyDelete1" parameterType="java.lang.Integer">
+	DELETE FROM webstore.board_reply
+	WHERE reno=#{reno};
+	
+	</delete>
+
+
+
+</mapper>

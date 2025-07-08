@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <typeAliases>
+  <typeAlias alias = "BoardDTO" type="kr.co.four.board.BoardDTO"/> 
+   <typeAlias alias="BoardReply" type="kr.co.four.board.BoardReply"/>
+  </typeAliases>
+ 
+</configuration>
+
+
+<!--  typeAlias는 타입 별칭  -->
+
+
+<!-- 마이마비트 소개 예제에 빌드 첫번쨰거 복사 붙여놓고 configuration 만 남겨놓고 지움
+  
+또한 mappers 파일 만들고 맵퍼emp.xml 파일을 만들어야함   -->

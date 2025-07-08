@@ -1,0 +1,362 @@
+/* 🌍 Global Finance AI Platform - Custom Styles */
+
+/* 그라데이션 배경 효과 */
+.finance-gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.finance-gradient-bg-2 {
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.finance-gradient-bg-3 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 카드 스타일 */
+.finance-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-left: 5px solid #007bff;
+    overflow: hidden;
+}
+
+.finance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.finance-card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+/* AI 점수 스타일 */
+.ai-score {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.ai-score-large {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* 가격 변동 색상 */
+.positive-change {
+    color: #28a745;
+    font-weight: bold;
+    animation: pulse-green 2s infinite;
+}
+
+.negative-change {
+    color: #dc3545;
+    font-weight: bold;
+    animation: pulse-red 2s infinite;
+}
+
+.neutral-change {
+    color: #6c757d;
+    font-weight: bold;
+}
+
+/* 애니메이션 효과 */
+@keyframes pulse-green {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+@keyframes pulse-red {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-up {
+    animation: slideInUp 0.6s ease-out;
+}
+
+/* 추천 배지 */
+.recommendation-badge {
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.strong-buy {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.buy {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.hold {
+    background: linear-gradient(45deg, #ffc107, #e0a800);
+    color: #000;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.sell {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+    color: white;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.strong-sell {
+    background: linear-gradient(45deg, #6c757d, #545b62);
+    color: white;
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+/* 리스크 인디케이터 */
+.risk-indicator {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.low-risk {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+}
+
+.medium-risk {
+    background: linear-gradient(45deg, #ffc107, #e0a800);
+    color: #000;
+}
+
+.high-risk {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+    color: white;
+}
+
+.very-high-risk {
+    background: linear-gradient(45deg, #6f42c1, #5a2d91);
+    color: white;
+}
+
+/* 국가 배지 */
+.country-badge {
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.us-badge {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+}
+
+.kr-badge {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+}
+
+.jp-badge {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+    color: white;
+}
+
+/* 섹터별 색상 */
+.sector-technology { border-left-color: #007bff; }
+.sector-healthcare { border-left-color: #28a745; }
+.sector-finance { border-left-color: #ffc107; }
+.sector-consumer { border-left-color: #dc3545; }
+.sector-energy { border-left-color: #6f42c1; }
+.sector-industrial { border-left-color: #fd7e14; }
+
+/* 실시간 업데이트 인디케이터 */
+.real-time-indicator {
+    animation: pulse 2s infinite;
+    color: #28a745;
+    font-weight: bold;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* 차트 컨테이너 */
+.chart-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+/* AI 분석 로그 */
+.ai-log {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    line-height: 1.6;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.log-entry {
+    margin-bottom: 8px;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.05);
+}
+
+.log-entry:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .finance-card {
+        margin-bottom: 15px;
+    }
+    
+    .ai-score-large {
+        font-size: 2em;
+    }
+    
+    .recommendation-badge {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
+
+/* 로딩 스피너 */
+.finance-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 글래스모피즘 효과 */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+}
+
+/* 호버 효과 */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* 텍스트 그라데이션 */
+.text-gradient {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* 버튼 스타일 */
+.finance-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.finance-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/* 통계 카드 */
+.stats-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.stats-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stats-label {
+    color: #6c757d;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+} 

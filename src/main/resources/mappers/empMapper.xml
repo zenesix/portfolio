@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.four.empMapper">
+<!-- 로그인 처리를 위한 SQL   parameterType:sql 키,값 쌍 형태의 map 객체임을 선언해주는거고, 결과타입은:조회결과를 컬럼명- 값 쌍의 Map으로 반환하도록 지정 -->
+	<select id="login" parameterType="java.util.Map" resultType="java.util.Map">
+		select id,name 
+		from springuser
+ 		where id=#{id} and password= #{password}
+	</select>
+	
+</mapper>
